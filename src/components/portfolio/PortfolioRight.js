@@ -1,14 +1,15 @@
 import React from 'react'
 import { ReactComponent as External } from '../../assets/external.svg';
+import { ReactComponent as GitHub } from '../../assets/github.svg';
 
-function PortfolioRight({title, description, tech}) {
+function PortfolioRight({title, link, description, tech, img, git}) {
   return (
     <>
       <div className="portfolio__right">
         <div className="project__content">
           <p className="project__overline">Featured Project</p>
           <h3 className="project__title">
-            <a href="http://www.vaszubarvhk.cz">{title}</a>
+            <a href={link}>{title}</a>
           </h3>
           <div className="project__description">
             <p>{description}</p>
@@ -22,12 +23,15 @@ function PortfolioRight({title, description, tech}) {
             }
           </ul>
           <div className="project__links">
-            <a href="https://www.github.com/Pavelhaj93" className="social__link">
+            <a href={link} className="social__link">
               <External height="20px"/>
             </a>
+            {git && <a href={git} className="social__link">
+                <GitHub height="20px" />
+            </a>}
           </div>
         </div>
-        <img src="/img/projects/vaszubarpicture.png" height="350px" alt="vaszubar" className="project__img" />
+        <img src={img} height="350px" alt="vaszubar" className="project__img" />
       </div>
     </>
   )

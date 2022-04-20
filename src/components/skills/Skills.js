@@ -44,10 +44,11 @@ function Skills() {
             path: "/img/sass.png"
         }
     ]
+
   return (
     <>
-        <section className="skills">
-            <h2 className="skills__title">Tech skills</h2>
+        <section id="skills" className="skills">
+            <h2 className="skills__title heading">02.<span className="heading__span"> Tech Skills</span></h2>
             <div className="skills__container">
                 {skills.map((skill) => {
                     return (

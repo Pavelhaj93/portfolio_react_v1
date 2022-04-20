@@ -6,6 +6,8 @@ import SocialRight from "./components/social/SocialRight";
 import AboutMe from "./components/aboutme/AboutMe";
 import Skills from "./components/skills/Skills";
 import Portfolio from "./components/portfolio/Portfolio";
+import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <Portfolio />
       <SocialLeft />
       <SocialRight /> 
+      <Contact />
+      <Footer />
     </div>
   );
 }

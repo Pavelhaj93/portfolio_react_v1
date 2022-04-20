@@ -1,22 +1,27 @@
 .header {
-    height: 95vh;
+    min-height: 95vh;
     color: #ebebeb;
     text-align: left;
-    margin-top: 4rem;
-    padding-top: 10rem;
+    margin-top: 3rem;
+    padding-top: 8rem;
     background-color: $navy;
     width: 100vw;
+    
+    &__container {
+        max-width: 80%;
+        margin: 0 auto;
+    }
 
     &__title {
         font-size: 1.2rem;
         font-weight: normal;
         margin-top: 5rem;
-        margin-left: 20rem;
+        margin-right: 5em;
         color: $greenish;
 
         a {
-            font-size: 4rem;
-            color: white;
+            font-size: 5rem;
+            color: $lightest-slate;
         }
 
         a:hover {
@@ -24,27 +29,39 @@
         }
     }
 
-    &__desc {
-        font-size: 4rem;
-        font-weight: normal;
-        margin-top: 3rem;
-        margin-left: 20rem; 
+    &__link {
+            color: $greenish;
+            border-bottom: 5px solid #ebebeb;
+            font-weight: bold;
+            text-decoration: none;
+            position: relative;
 
+            &:hover {
+                opacity: 0.8;
+                bottom: 3px;
+            }
+        }
+
+    &__desc {
+        font-size: 5rem;
+        font-weight: 500;
+        margin-top: 2rem;
+        color: $slate;
+        max-width: 80%;
     }
 
-    &__link {
-        color: $greenish;
-        border-bottom: 5px solid #ebebeb;
-        font-weight: bold;
-        text-decoration: none;
-        position: relative;
+    &__text {
+        color: $slate;
+        font-size: 1.2em;
+        width: 30%;
 
-        &:hover {
-            opacity: 0.8;
-            bottom: 3px;
+        @media (max-width: 1080px) {
+            & {
+                width: 70%;
+            }
         }
     }
-  }
+}
 
   
   

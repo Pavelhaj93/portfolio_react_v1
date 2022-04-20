@@ -1,17 +1,28 @@
 .about {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: space-between;
     background-color: $navy;
-    padding: 2rem 20% 6rem 20%;
+    // padding: 2rem 20% 6rem 20%;
     align-items: center;
     justify-content: space-between; 
 
+    &__container {
+        min-width: 75%;
+        margin: 0 5em;
+        display: flex;
+
+        @media (max-width: 768px) {
+            & {
+                flex-direction: column;
+                margin: 0 auto;
+                align-items: center;
+            }
+        }
+        
+    }
+
     .heading {
-        width: 100%;
-        color: $greenish;
-        margin-bottom: 1em;
-        font-size: 3rem;
         text-align: left;  
     }
 
@@ -20,8 +31,22 @@
         height: 400px;
         border-radius: 5%;
         object-fit: cover;  
-        position: relative;
         transition: all 0.3s;
+
+        @media (min-width: 1080px) and (max-width: 1200px) {
+            & {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 1080px) {
+            & {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
 
         &:hover {
             transform: translate(2.5%, 2.5%);
@@ -31,6 +56,23 @@
             display: block;
             position: relative; 
             z-index: 2;
+            width: 400px;
+            height: 400px;
+
+            @media (min-width: 1080px) and (max-width: 1200px) {
+                & {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+
+            @media (max-width: 1080px) {
+                & {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+    
 
             &::before {
                 content: "";
@@ -48,11 +90,17 @@
     }
 
     &__desc {
-        width: 50%;
+        width: 60%;
+        margin: 0 auto;
+        color: $slate;
         font-size: 1.25rem;
-        justify-content: center;
-        align-items: center;
-        align-content: center; 
+        
+        @media (max-width: 768px) {
+            & {
+                width: 80%;
+                margin-bottom: 5em;
+            }
+        }
     }
 
     &__underline {

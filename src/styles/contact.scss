@@ -1,0 +1,29 @@
+.contact {
+    min-height: 50vh;
+    background-color: $navy;
+
+    &__container {
+        height: 80%;
+        width: 30%;
+        margin: 0 auto;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 1.5em;
+
+        &--underline {
+            font-size: 4em;
+            margin-bottom: 1em;
+        }
+    }
+
+    &__text {
+        margin: 0 auto 3em auto;
+
+    }
+}

@@ -1,10 +1,15 @@
 .portfolio__left {
     display: flex;
     margin: 0 auto 10em auto;
-    width: 50%;
+    width: 60%;
 
     .project__img {
         border-radius: $border-radius;
+        filter: grayscale(1);
+
+        &:hover {
+            filter: grayscale(0);
+        }
     }
 
     .project__content {
@@ -61,6 +66,7 @@
 svg {
     fill: $light-slate;
     width: 20px;
+    margin: 5px;
 
     &:hover {
         fill: $greenish;    

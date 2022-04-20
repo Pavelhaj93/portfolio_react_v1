@@ -1,0 +1,53 @@
+.social--left {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+    z-index: 10;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+        list-style: none;
+        left: 40px;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 90px;
+            margin: 0px auto;
+            background-color: white;
+            opacity: 0.8;
+        }
+
+        li {
+            padding: 10px;
+            // max-width: 10px;
+            
+            .social__link {
+                fill: white;
+                opacity: 0.8;
+                margin-bottom: 10px;
+                position: relative;
+                transition: all .1s;
+                
+                &:hover {
+                    opacity: 1;
+                    fill: $greenish;
+                    bottom: 3px;
+                }
+                
+                svg {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+

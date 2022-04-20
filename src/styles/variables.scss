@@ -1,0 +1,29 @@
+// Colors
+$navy: #0a192f;
+$light-navy: #112240;
+$lightest-navy: #233554;
+$greyish: #444444;
+$blackish: #232323;
+$slate: #8892b0;
+$light-slate: #a8b2d1;
+$lightest-slate: #ccd6f6;
+$whit: #e6f1ff;
+$greenish: #64ffda;
+
+// Vars
+$border-radius: 4px;
+
+// Main components
+.button {
+    background-color: $navy;
+    color: $greenish;
+    border: 1px solid $greenish;
+    border-radius: 5em;
+    text-decoration: none;
+    padding: 0.8em 2em;
+
+    &:hover {
+        background-color: $greenish;
+        color: $blackish;
+    }
+}

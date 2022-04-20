@@ -1,0 +1,68 @@
+.portfolio__left {
+    display: flex;
+    margin: 0 auto 10em auto;
+    width: 50%;
+
+    .project__img {
+        border-radius: $border-radius;
+    }
+
+    .project__content {
+        height: 350px;
+        margin-left: -10em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: right;
+
+        .project__overline {
+            color: $greenish;
+        }
+
+        .project__title a {
+            color: $lightest-slate;
+            text-decoration: none;
+            font-size: 1.5em;
+
+            &:hover {
+                color: $greenish;
+            }
+        }
+
+        .project__description {
+            height: 50%;
+            background-color: $light-navy;
+            border-radius: $border-radius;
+            color: $light-slate;
+            padding: 1.5em;
+            
+        }
+    
+        .project__tech--list {
+            color: $light-slate;
+            display: flex;
+            justify-content: flex-end;
+            text-decoration: none;
+            list-style-type: none;
+        
+        
+            li {
+                padding-left: 1em;
+            }
+        }
+
+        .project__links {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+svg {
+    fill: $light-slate;
+    width: 20px;
+
+    &:hover {
+        fill: $greenish;    
+    }
+}

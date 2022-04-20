@@ -1,0 +1,50 @@
+.header {
+    height: 95vh;
+    color: #ebebeb;
+    text-align: left;
+    margin-top: 4rem;
+    padding-top: 10rem;
+    background-color: $navy;
+    width: 100vw;
+
+    &__title {
+        font-size: 1.2rem;
+        font-weight: normal;
+        margin-top: 5rem;
+        margin-left: 20rem;
+        color: $greenish;
+
+        a {
+            font-size: 4rem;
+            color: white;
+        }
+
+        a:hover {
+            color: $greenish;
+        }
+    }
+
+    &__desc {
+        font-size: 4rem;
+        font-weight: normal;
+        margin-top: 3rem;
+        margin-left: 20rem; 
+
+    }
+
+    &__link {
+        color: $greenish;
+        border-bottom: 5px solid #ebebeb;
+        font-weight: bold;
+        text-decoration: none;
+        position: relative;
+
+        &:hover {
+            opacity: 0.8;
+            bottom: 3px;
+        }
+    }
+  }
+
+  
+  

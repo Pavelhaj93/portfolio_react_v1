@@ -1,0 +1,55 @@
+.skills {
+    height: 50em;
+    width: 100vw;
+    padding-top: 5em;
+    overflow: hidden;
+    background-color: $navy;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        width: 100%;
+        color: $greenish;
+        font-size: 3rem;
+        text-align: center;  
+    }
+
+    &__container {
+        height: 50%;
+        width: 60%;
+        padding-right: 10em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+}
+
+.skill {
+    display: flex;
+    width: 150px;
+    height: 120px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    
+    &__title {
+        text-align: center;
+    }
+
+    &__img {
+        width: 80px;
+        filter: invert(97%) sepia(90%) saturate(100%) hue-rotate(83deg) brightness(102%) contrast(101%);
+        -webkit-filter: invert(97%) sepia(90%) saturate(100%) hue-rotate(83deg) brightness(102%) contrast(101%);
+
+        /* Disable grayscale on hover */
+        &:hover {
+            -webkit-filter: grayscale(0);
+            filter: none;
+        }
+    }
+}
+

@@ -28,7 +28,7 @@ function PortfolioLeft({title, link, description, tech, img, git}) {
               <External height="20px"/>
             </a>
             {git && <a href={git} className="social__link">
-                <GitHub height="20px" />
+              <GitHub height="20px" />
             </a>}
           </div>
         </div>

@@ -9,6 +9,7 @@
 
         &:hover {
             filter: grayscale(0);
+            z-index: 3;
         }
     }
 
@@ -19,6 +20,7 @@
         flex-direction: column;
         justify-content: space-around;
         text-align: right;
+        z-index: 2;
 
         .project__overline {
             color: $greenish;

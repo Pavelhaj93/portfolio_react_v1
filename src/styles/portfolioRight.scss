@@ -5,6 +5,12 @@
 
     .project__img {
         border-radius: $border-radius;
+        filter: grayscale(1);
+
+        &:hover {
+            filter: grayscale(0);
+            z-index: 2;
+        }
     }
 
     .project__content {

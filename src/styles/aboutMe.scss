@@ -1,9 +1,7 @@
 .about {
     display: flex;
-    // flex-wrap: wrap;
     justify-content: space-between;
     background-color: $navy;
-    // padding: 2rem 20% 6rem 20%;
     align-items: center;
     justify-content: space-between; 
 
@@ -47,7 +45,6 @@
             }
         }
 
-
         &:hover {
             transform: translate(2.5%, 2.5%);
         }
@@ -73,7 +70,6 @@
                 }
             }
     
-
             &::before {
                 content: "";
                 display: block;

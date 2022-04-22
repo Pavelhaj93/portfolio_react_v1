@@ -15,12 +15,12 @@ function Footer() {
     
         return () => window.removeEventListener('resize', () => setScreenSize([window.innerWidth]));
     
-      }, []);
+    }, []);
 
   return (
     <>
         <footer id="footer" className="footer">
-            <div className={screenSize[0] < 768 ? "footer__container" : "hidden"}>
+            <div className={screenSize[0] <= 768 ? "footer__container" : "hidden"}>
                 <ul className="footer__list">
                     <li>
                         <a href="https://www.github.com/Pavelhaj93" className="footer__link">

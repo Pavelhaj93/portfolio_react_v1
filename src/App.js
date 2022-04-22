@@ -11,17 +11,22 @@ import Footer from "./components/footer/Footer";
 
 function App() {
   return (
+    <>
     <div className="App">
-      <Navbar />
       <Header />
       <AboutMe />
       <Skills />
       <Portfolio />
-      <SocialLeft />
-      <SocialRight /> 
       <Contact />
       <Footer />
     </div>
+    <div className="social">
+      <Navbar />
+      <SocialLeft />
+      <SocialRight /> 
+    </div>
+    </>
+    
   );
 }
 

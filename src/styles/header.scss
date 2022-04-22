@@ -5,11 +5,19 @@
     margin-top: 3rem;
     padding-top: 8rem;
     background-color: $navy;
-    width: 100vw;
+
+    @media (max-width: 768px) {
+        padding-top: 3rem;
+        max-height: 30vh;
+    }
     
     &__container {
         max-width: 80%;
         margin: 0 auto;
+
+        @media (max-width: 768px) {
+            max-width: 90%;
+         }
     }
 
     &__title {
@@ -18,10 +26,19 @@
         margin-top: 5rem;
         margin-right: 5em;
         color: $greenish;
+        white-space: nowrap;
 
         a {
             font-size: 5rem;
             color: $lightest-slate;
+
+            @media (max-width: 1080px) {
+                font-size: 4rem;
+            }
+            
+            @media (max-width: 768px) {
+               font-size: 2.5rem;
+            }
         }
 
         a:hover {
@@ -47,7 +64,17 @@
         font-weight: 500;
         margin-top: 2rem;
         color: $slate;
-        max-width: 80%;
+        max-width: 90%;
+        
+        @media (max-width: 1080px) {
+            font-size: 3.8rem;
+            max-width: 90%;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+         }
     }
 
     &__text {
@@ -57,7 +84,7 @@
 
         @media (max-width: 1080px) {
             & {
-                width: 70%;
+                width: 100%;
             }
         }
     }

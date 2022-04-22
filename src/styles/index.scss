@@ -1,6 +1,7 @@
 @import 'variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
 @import 'navbar.scss';
+@import 'hamburgerNav.scss';
 @import 'header.scss';
 @import 'socialLeft.scss';
 @import 'socialRight.scss';
@@ -22,8 +23,8 @@
 }
 
 body {
-  margin: 0;
-  padding: 0 5em;
+  margin: 0 auto;
+  padding: 0 auto;
   background-color: $navy;
   color: $greyish;
   font-family: 'Alegreya Sans', 'Roboto', 'Oxygen',
@@ -36,6 +37,17 @@ body {
 }
 
 html {
+  width: 100vw;
+}
+
+.App {
+  padding: 0 5em;
   width: 100%;
+
+  @media (max-width: 768px) {
+    & {
+      padding: 0 2em;
+    }
+  }
 }
 

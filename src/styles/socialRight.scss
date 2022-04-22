@@ -11,6 +11,12 @@
         }
     }
 
+    @media (max-width: 768px) {
+        & {
+            display: none;
+        }
+    }
+
     &__email {
         text-decoration: none;
         display: block;

@@ -24,17 +24,17 @@ function Footer() {
                 <ul className="footer__list">
                     <li>
                         <a href="https://www.github.com/Pavelhaj93" className="footer__link">
-                            <GitHub height="20px"/>
+                            <GitHub height="20px" width="20px" />
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/pavelhajduch/" className="footer__link">
-                            <LinkedIn height="20px"/>
+                            <LinkedIn height="20px" width="20px"/>
                         </a>
                     </li>
                     <li>
                         <a href="https://www.instagram.com/pavelhaj/" className="footer__link">
-                            <Instagram height="20px" />
+                            <Instagram height="20px" width="20px" />
                         </a>
                     </li>
                 </ul>

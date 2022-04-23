@@ -32,7 +32,7 @@
             width: 1px;
             height: 90px;
             margin: 0px auto;
-            background-color: white;
+            background-color: $light-slate;
             opacity: 0.8;
         }
 
@@ -41,7 +41,7 @@
             // max-width: 10px;
             
             .social__link {
-                fill: white;
+                fill: $light-slate;
                 opacity: 0.8;
                 margin-bottom: 10px;
                 position: relative;

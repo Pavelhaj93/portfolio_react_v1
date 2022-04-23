@@ -1,4 +1,3 @@
-import React, { useState, useLayoutEffect } from 'react'
 import PortfolioLeft from './PortfolioLeft'
 import PortfolioRight from './PortfolioRight'
 

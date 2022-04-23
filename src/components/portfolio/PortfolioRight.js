@@ -41,12 +41,14 @@ function PortfolioRight({title, link, description, tech, img, git}) {
               <External height="20px"/>
             </a>
             {git && <a href={git} className="social__link">
-                <GitHub height="20px" />
+              <GitHub height="20px" />
             </a>}
           </div>
         </div>
-        <div className={screenSize[0] > 769 ? "portfolio__wrapper--img" : "hidden"}> 
-            <img src={img} height="350px" alt="vaszubar" className="project__img" />
+        <div className={screenSize[0] > 768 ? "portfolio__wrapper--img" : "hidden"}> 
+          <a href={link} alt={title} target="_blank" rel="noreferrer">
+            <img src={img} alt={title} className="project__img" />
+          </a>
         </div>
       </PortfolioContainerRight>
     </>
@@ -66,37 +68,43 @@ const PortfolioContainerRight = styled.div`
 
     @media (max-width: 768px) {
       & {
-        padding: 5%;        
-    }
-  }
-
-  &:after {
-
-    @media (max-width: 768px) {
-      & {
-        content: "";
-        display: block;
-        position: absolute;
-        margin: 0 auto;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.2;
-        background-image: url(${props => props.img});
-        background-size: cover;
-        background-repeat: no-repeat;
-        z-index: 5;
+      padding: 5%;        
       }
     }
-  }
 
-  .portfolio__wrapper--img:hover {
-      z-index: 3;
-  }
+    &:after {
 
-  .project__img {
-      border-radius: $border-radius;
+      @media (max-width: 768px) {
+        & {
+          content: "";
+          display: block;
+          position: absolute;
+          margin: 0 auto;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.2;
+          background-image: url(${props => props.img});
+          background-size: cover;
+          background-repeat: no-repeat;
+          z-index: 5;
+          border-radius: var(--border-radius);
+        }
+      }
+    }
+
+    .portfolio__wrapper--img {
+      max-width: 50%;
+      margin-right: 10em;
+
+      &:hover {
+        z-index: 3;
+      }
+    }
+
+    .project__img {
+      border-radius: var(--border-radius);
       filter: grayscale(1);
 
       @media (max-width: 1200px) {
@@ -112,109 +120,78 @@ const PortfolioContainerRight = styled.div`
       }
 
       &:hover {
-          filter: grayscale(0);
-          z-index: 3;
+        filter: grayscale(0);
+        z-index: 3;
       }
-  }
+    }
 
-  .project__content {
+    .project__content {
       height: 350px;
+      min-width: 50%;
       margin-right: -10em;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       text-align: left;
       z-index: 2;
-
-      @media (max-width: 1200px) {
-        & {
-          margin-right: -15em;
-        }
-      }
-
-      @media (max-width: 1000px) {
-        & {
-          margin-right: -20em;
-        }
-      }
+      border-radius: var(--border-radius);
 
       @media (max-width: 768px) {
-          & {
-              width: 100%;
-              text-align: right;
-              margin-right: 0;
-          }
+        & {
+          width: 100%;
+          text-align: left;
+          margin-right: 0;
+        }
       }
 
       .project__overline {
-          color: var(--greenish-color);
+        color: var(--greenish-color);
       }
 
       .project__title a {
-          color: var(--lightestslate-color);
-          text-decoration: none;
-          font-size: 1.5em;
+        color: var(--lightestslate-color);
+        text-decoration: none;
+        font-size: 1.5em;
 
-          &:hover {
-              color: var(--greenish-color);
-          }
+        &:hover {
+          color: var(--greenish-color);
+        }
       }
 
       .project__description {
-          height: 50%;
-          background-color: var(--lightnavy-color);
-          border-radius: $border-radius;
-          color: var(--lightslate-color);
-          padding: 1.5em;
+        height: 50%;
+        background-color: var(--lightnavy-color);
+        border-radius: var(--border-radius);
+        color: var(--lightslate-color);
+        padding: 1.5em;
 
-          @media (max-width: 768px) {
-              & {
-                  background-color: transparent;
-                  padding: 0;
-              }
+        @media (max-width: 768px) {
+          & {
+            background-color: transparent;
+            padding: 0;
           }
-          
+        }  
       }
-  
+
       .project__tech--list {
-          color: var(--lightslate-color);
-          display: flex;
-          justify-content: flex-start;
-          text-decoration: none;
-          list-style-type: none;
-          flex-wrap: wrap;
-
-          @media (max-width: 768px) {
-              & {
-                  justify-content: flex-end;
-              }
-          }
-      
-          li {
-              padding-right: 1em;
-              white-space: nowrap;
-
-              @media (max-width: 768px) {
-                  & {
-                      padding-left: 1em;
-                      padding-right: 0;
-                  }
-              }
-          }
+        color: var(--lightslate-color);
+        display: flex;
+        justify-content: flex-start;
+        text-decoration: none;
+        list-style-type: none;
+        flex-wrap: wrap;
+    
+        li {
+          padding-right: 1em;
+          white-space: nowrap;
+        }
       }
 
       .project__links {
-          display: flex;
-          justify-content: flex-start;
-
-          @media (max-width: 768px) {
-              & {
-                  justify-content: flex-end;
-              }
-          }
+        display: flex;
+        justify-content: flex-start;
       }
-  }
-}
+    }
 
 svg {
   fill: var(--lightslate-color);
@@ -222,6 +199,6 @@ svg {
   margin: 5px;
 
   &:hover {
-      fill: var(--greenish-color);    
+    fill: var(--greenish-color);    
   }
 }`

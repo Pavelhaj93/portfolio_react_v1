@@ -21,7 +21,9 @@ function PortfolioLeft({title, link, description, tech, img, git}) {
     <>
       <PortfolioContainerLeft img={img}>
           <div className={screenSize[0] > 768 ? "portfolio__wrapper--img" : "hidden"} >
-            <img src={img} height="350px" alt="vaszubar" className="project__img" />
+            <a href={link} alt={title} target="_blank" rel="noreferrer">
+              <img src={img} alt={title} className="project__img" />
+            </a>
           </div>
         <div className="project__content">
           <p className="project__overline">Featured Project</p>
@@ -87,57 +89,52 @@ const PortfolioContainerLeft = styled.div`
           background-image: url(${props => props.img});
           background-size: cover;
           background-repeat: no-repeat;
-          z-index: 5;       
+          z-index: 5; 
+          border-radius: var(--border-radius);      
         }
       }
     }
 
-    .portfolio__wrapper--img:hover {
+    .portfolio__wrapper--img {
+      width: 50%;
+  
+      &:hover {
         z-index: 3;
+      }
     }
 
     .project__img {
-        border-radius: $border-radius;
-        filter: grayscale(1);
-
-        @media (max-width: 1200px) {
-          & {
-            opacity: 0.7;
-          }
-        }
-  
-        @media (max-width: 1000px) {
-          & {
-            opacity: 0.3;
-          }
-        }
-
-        &:hover {
-          filter: grayscale(0);
-          z-index: 3;
-        }
-    }
-
-    .project__content {
-      height: 350px;
-      margin-left: -10em;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      text-align: right;
-      z-index: 2;
+      border-radius: var(--border-radius);
+      filter: grayscale(1);
+      
 
       @media (max-width: 1200px) {
         & {
-          margin-left: -15em;
+          opacity: 0.7;
         }
       }
 
       @media (max-width: 1000px) {
         & {
-          margin-left: -20em;
+          opacity: 0.3;
         }
       }
+
+      &:hover {
+        filter: grayscale(0);
+        z-index: 3;
+      }
+    }
+
+    .project__content {
+      height: 350px;
+      // margin-left: -10em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: right;
+      z-index: 2;
+      border-radius: var(--border-radius);
 
       @media (max-width: 768px) {
         & {
@@ -157,21 +154,21 @@ const PortfolioContainerLeft = styled.div`
         font-size: 1.5em;
 
         &:hover {
-            color: var(--greenish-color);
+          color: var(--greenish-color);
         }
       }
 
       .project__description {
         height: 50%;
         background-color: var(--lightnavy-color);
-        border-radius: $border-radius;
+        border-radius: var(--border-radius);
         color: var(--lightslate-color);
         padding: 1.5em;
 
         @media (max-width: 768px) {
           & {
-              background-color: transparent;
-              padding: 0;
+            background-color: transparent;
+            padding: 0;
           }
         }   
       }
@@ -215,14 +212,13 @@ const PortfolioContainerLeft = styled.div`
       }
     }
 
-
 svg {
-    fill: var(--lightslate-color);
-    width: 20px;
-    margin: 5px;
+  fill: var(--lightslate-color);
+  width: 20px;
+  margin: 5px;
 
-    &:hover {
-        fill: var(--greenish-color);    
-    }
+  &:hover {
+    fill: var(--greenish-color);    
+  }
 }`
 

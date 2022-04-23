@@ -17,6 +17,20 @@
 
         svg {
             margin: 0 1em 0 1em;
+            fill: $light-slate;
+
+            &:hover {
+                fill: $greenish;
+            }
+        }
+    }
+
+    p {
+        color: $light-slate;
+        cursor: pointer;
+
+        &:hover {
+            color: $greenish;
         }
     }
 }

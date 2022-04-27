@@ -32,7 +32,7 @@ function AboutMe() {
                 </div>
                 <div className="about__image__wrapper">
                     <img 
-                        src="/img/profilepicture.jpg"
+                        src="/img/profilepicture.JPG"
                         alt="aboutimage"
                         className="about__image"
                     />

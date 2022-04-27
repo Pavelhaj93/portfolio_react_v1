@@ -20,7 +20,7 @@ function PortfolioLeft({title, link, description, tech, img, git}) {
   return (
     <>
       <PortfolioContainerLeft img={img}>
-          <div className={screenSize[0] > 828 ? "portfolio__wrapper--img" : "hidden"} >
+          <div className={screenSize[0] > 768 ? "portfolio__wrapper--img" : "hidden"} >
             <a href={link} alt={title} target="_blank" rel="noreferrer">
               <img src={img} alt={title} className="project__img" />
             </a>
@@ -60,14 +60,14 @@ export default PortfolioLeft
 
 const PortfolioContainerLeft = styled.div`
 
-  display: grid;
-  position: relative;
-  grid-template-columns: repeat(10, 1fr);
+  display: flex;
+  margin: 0 auto 10em auto;
+  width: 90%;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 10em;
-  max-width: 1000px;
+  position: relative;
 
-    @media (max-width: 828px) {
+    @media (max-width: 768px) {
       & {
         padding: 5%;        
       }
@@ -75,7 +75,7 @@ const PortfolioContainerLeft = styled.div`
 
     &:after {
 
-      @media (max-width: 828px) {
+      @media (max-width: 768px) {
         & {
           content: "";
           display: block;
@@ -96,10 +96,7 @@ const PortfolioContainerLeft = styled.div`
     }
 
     .portfolio__wrapper--img {
-      grid-column: 1 / 6;
-      grid-row: 1 / -1;
-      position: relative;
-      width: auto;
+      width: 50%;
   
       &:hover {
         z-index: 3;
@@ -130,38 +127,31 @@ const PortfolioContainerLeft = styled.div`
     }
 
     .project__content {
-      grid-column: 6 / -1;
-      grid-row: 1;
+      height: 350px;
+      // margin-left: -10em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
       text-align: right;
       z-index: 2;
       border-radius: var(--border-radius);
 
-      @media (max-width: 828px) {
+      @media (max-width: 768px) {
         & {
-          grid-column: 1 / -1;
           width: 100%;
           text-align: left;
+          margin-left: 0;
         }
-      }
-
-      @media (min-width: 950px) and (max-width: 1080px) {
-        grid-column: 5 / -1;
-      }
-
-      @media (min-width: 828px) and (max-width: 950px) {
-        grid-column: 4 / -1;
       }
 
       .project__overline {
         color: var(--greenish-color);
-        margin-bottom: 1em;
       }
 
       .project__title a {
         color: var(--lightestslate-color);
         text-decoration: none;
         font-size: 1.5em;
-        padding-bottom: 2em;
 
         &:hover {
           color: var(--greenish-color);
@@ -174,8 +164,6 @@ const PortfolioContainerLeft = styled.div`
         border-radius: var(--border-radius);
         color: var(--lightslate-color);
         padding: 1.5em;
-        margin-bottom: 1em;
-        margin-top: 1em;
 
         @media (max-width: 768px) {
           & {
@@ -192,7 +180,6 @@ const PortfolioContainerLeft = styled.div`
         text-decoration: none;
         list-style-type: none;
         flex-wrap: wrap;
-        margin-bottom: 1em;
         
         @media (max-width: 768px) {
           & {

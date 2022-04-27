@@ -45,7 +45,7 @@ function PortfolioRight({title, link, description, tech, img, git}) {
             </a>}
           </div>
         </div>
-        <div className={screenSize[0] > 768 ? "portfolio__wrapper--img" : "hidden"}> 
+        <div className={screenSize[0] > 828 ? "portfolio__wrapper--img" : "hidden"}> 
           <a href={link} alt={title} target="_blank" rel="noreferrer">
             <img src={img} alt={title} className="project__img" />
           </a>
@@ -59,14 +59,14 @@ export default PortfolioRight
 
 const PortfolioContainerRight = styled.div`
 
-  display: flex;
-  margin: 0 auto 10em auto;
-  width: 90%;
-  justify-content: center;
-  align-items: center;
+  display: grid;
   position: relative;
+  grid-template-columns: repeat(10, 1fr);
+  align-items: center;
+  margin-bottom: 10em;
+  max-width: 1000px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 828px) {
       & {
       padding: 5%;        
       }
@@ -74,7 +74,7 @@ const PortfolioContainerRight = styled.div`
 
     &:after {
 
-      @media (max-width: 768px) {
+      @media (max-width: 828px) {
         & {
           content: "";
           display: block;
@@ -95,8 +95,13 @@ const PortfolioContainerRight = styled.div`
     }
 
     .portfolio__wrapper--img {
-      max-width: 50%;
-      margin-right: 10em;
+      grid-column: 5 / -1;
+      justify-self: end;
+      max-height: 350px;
+      text-align: right;
+      grid-row: 1 / -1;
+      position: relative;
+      width: auto;
 
       &:hover {
         z-index: 3;
@@ -126,26 +131,31 @@ const PortfolioContainerRight = styled.div`
     }
 
     .project__content {
-      height: 350px;
-      min-width: 50%;
-      margin-right: -10em;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+      grid-column: 1 / 6;
+      grid-row: 1;
       text-align: left;
       z-index: 2;
       border-radius: var(--border-radius);
 
-      @media (max-width: 768px) {
+      @media (max-width: 828px) {
         & {
+          grid-column: 1 / -1;
           width: 100%;
           text-align: left;
-          margin-right: 0;
         }
+      }
+
+      @media (max-width: 1080px) {
+        grid-column: 1 / 7;
+      }
+
+      @media (max-width: 950px) {
+        grid-column: 1 / 8;
       }
 
       .project__overline {
         color: var(--greenish-color);
+        margin-bottom: 1em;
       }
 
       .project__title a {
@@ -164,6 +174,8 @@ const PortfolioContainerRight = styled.div`
         border-radius: var(--border-radius);
         color: var(--lightslate-color);
         padding: 1.5em;
+        margin-bottom: 1em;
+        margin-top: 1em;
 
         @media (max-width: 768px) {
           & {
@@ -180,7 +192,8 @@ const PortfolioContainerRight = styled.div`
         text-decoration: none;
         list-style-type: none;
         flex-wrap: wrap;
-    
+        margin-bottom: 1em;
+
         li {
           padding-right: 1em;
           white-space: nowrap;

@@ -1,18 +1,20 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-function HamburgerNav({screenSize, sidebar, showSidebar}) {
-    
+function HamburgerNav({ screenSize, sidebar, showSidebar }) {
   return (
     <>
-        <div className={screenSize[0] <= 800 ? "hamburger__wrapper" : "hidden"} onClick={() => showSidebar()}>
-            <HambIcon sidebar={sidebar} ></HambIcon>
-        </div>
+      <div
+        className={screenSize[0] <= 800 ? "hamburger__wrapper" : "hidden"}
+        onClick={() => showSidebar()}
+      >
+        <HambIcon sidebar={sidebar}></HambIcon>
+      </div>
     </>
-  )
+  );
 }
 
-export default HamburgerNav
+export default HamburgerNav;
 
 const HambIcon = styled.div`
   width: 30px;
@@ -21,10 +23,11 @@ const HambIcon = styled.div`
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255, 107, 47, .2);
   z-index: 20;
-  transition-delay: ${({sidebar}) => (sidebar ? `0.12s` : `0s`)};
-  // transform: rotate(${({sidebar}) => (sidebar ? `225deg` : `0deg`)});
+  transition-delay: ${({ sidebar }) => (sidebar ? `0.12s` : `0s`)};
+  // transform: rotate(${({ sidebar }) => (sidebar ? `225deg` : `0deg`)});
   transition-timing-function: cubic-bezier(
-    ${({sidebar}) => (sidebar ? `0.215, 0.61, 0.355, 1` : `0.55, 0.055, 0.675, 0.19`)}
+    ${({ sidebar }) =>
+      sidebar ? `0.215, 0.61, 0.355, 1` : `0.55, 0.055, 0.675, 0.19`}
   );
   
 
@@ -57,20 +60,21 @@ const HambIcon = styled.div`
   }
 
   &::before {
-    // width: ${({sidebar}) => (sidebar ? `50%` : `80%`)};
-    // bottom: ${({sidebar}) => (sidebar ? `15px` : `-10px`)};
-    // // left: ${({sidebar}) => (sidebar ? `10px` : `-15px`)};
-    // opacity: ${({sidebar}) => (sidebar ? 1 : 0)};
+    // width: ${({ sidebar }) => (sidebar ? `50%` : `80%`)};
+    // bottom: ${({ sidebar }) => (sidebar ? `15px` : `-10px`)};
+    // // left: ${({ sidebar }) => (sidebar ? `10px` : `-15px`)};
+    // opacity: ${({ sidebar }) => (sidebar ? 1 : 0)};
     // transition: all 0.5s ease-in-out;
   }
 
   // &::after {
-    // width: ${({sidebar}) => (sidebar ? `50%` : `80%`)};
-  //   top: ${({sidebar}) => (sidebar ? `0` : `30px`)};
-  //   left: ${({sidebar}) => (sidebar ? `-10px` : `30px`)};
-    // transform: rotate(${({sidebar}) => (sidebar ? `-135deg` : `-0`)});
-  //   // transition: ${({ menuOpen }) => (menuOpen ? 'var(--ham-after-active)' : 'var(--ham-after)')};
+    // width: ${({ sidebar }) => (sidebar ? `50%` : `80%`)};
+  //   top: ${({ sidebar }) => (sidebar ? `0` : `30px`)};
+  //   left: ${({ sidebar }) => (sidebar ? `-10px` : `30px`)};
+    // transform: rotate(${({ sidebar }) => (sidebar ? `-135deg` : `-0`)});
+  //   // transition: ${({ menuOpen }) =>
+    menuOpen ? "var(--ham-after-active)" : "var(--ham-after)"};
   }
 
 
-`
+`;

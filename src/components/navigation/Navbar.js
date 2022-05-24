@@ -1,11 +1,13 @@
 import React, { useState, useLayoutEffect, useEffect } from "react";
-import HamburgerNav from "./HamburgerNav";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import styled from "styled-components";
+import { Spin as Hamburger } from "hamburger-react";
 
-function Navbar() {
+const Navbar = () => {
   const [screenSize, setScreenSize] = useState([]);
+  const [sidebar, setSidebar] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   // Window screenSize effect
   useLayoutEffect(() => {
@@ -25,8 +27,6 @@ function Navbar() {
   }, []);
 
   // Hamuberger nav logic
-  const [sidebar, setSidebar] = useState(false);
-
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
@@ -68,11 +68,12 @@ function Navbar() {
           </li>
         </ul>
       </nav>
-      <HamburgerNav
-        screenSize={screenSize}
-        sidebar={sidebar}
-        showSidebar={showSidebar}
-      />
+      {screenSize <= 800 && (
+        <HamburgerContainer onClick={showSidebar}>
+          <Hamburger color="var(--greenish-color)" toggled={isOpen} toggle={setOpen}/>
+        </HamburgerContainer>
+      )}
+
       <Sidebar sidebar={sidebar}>
         <ul className="nav__sidebar__container">
           <li>
@@ -146,5 +147,14 @@ const Sidebar = styled.div`
     font-size: 1.5em;
     text-decoration: none;
     color: var(--lightestslate-color);
+  }
+`;
+
+const HamburgerContainer = styled.div`
+   {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
   }
 `;

@@ -132,7 +132,7 @@ const Sidebar = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 1s;
+  transition: all 0.5s ease-out;
 
   .nav__sidebar__container {
     display: ${({ sidebar }) => (sidebar ? "flex" : "none")};
@@ -152,7 +152,7 @@ const Sidebar = styled.div`
 
 const HamburgerContainer = styled.div`
    {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
     z-index: 100;

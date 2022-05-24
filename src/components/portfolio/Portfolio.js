@@ -6,31 +6,29 @@ import { useEffect } from "react";
 
 function Portfolio() {
   useEffect(() => {
-    Aos.init({ duration: 500 });
+    Aos.init({ duration: 500, once: false });
   }, []);
 
   return (
     <>
       <section id="portfolio" className="portfolio">
         <div className="portfolio__container">
-          <h3 className="portfolio__title heading" data-aos="fade-up" data-aos-once="true">
+          <h3 className="portfolio__title heading" data-aos="fade-up">
             03.<span className="heading__span"> Some things I've built</span>
           </h3>
           <PortfolioLeft
-            title="Looking For You"
-            description="This platform was designed to connect players, organizations and other specialized people from the gaming industry in a simple and effective form of registration in our database and subsequent display in our search engine."
+            title="JP Steel Structures"
+            description="Website about a company that manufactures and at the same time assembles steel structures. It also contains a contact form through which you can contact the business owner with a possible request"
             tech={[
-              "Javascript",
-              "React",
-              "PHP",
-              "Laravel",
-              "MySQL",
-              "Aos",
-              "Styled Components",
+              "Wordpress",
+              "SEO",
+              "Custom CSS",
+              "Copywriting",
+              "Marketing",
             ]}
-            img="/img/projects/lfypicture.png"
-            link="http://lfy.codeboot.cz"
-            git="https://github.com/Pavelhaj93/Laravel-React-LFY-project"
+            img="/img/projects/jpsteelpicture.png"
+            link="http://www.jpsteel.cz"
+            linkExternal="http://www.jpsteel.cz"
           />
           <PortfolioRight
             title="Váš Zubař v HK"
@@ -44,19 +42,32 @@ function Portfolio() {
             ]}
             img="/img/projects/vaszubarpicture.png"
             link="http://www.vaszubarvhk.cz"
+            linkExternal="http://www.vaszubarvhk.cz"
           />
           <PortfolioLeft
-            title="JP Steel Structures"
-            description="Website about a company that manufactures and at the same time assembles steel structures. It also contains a contact form through which you can contact the business owner with a possible request"
+            title="Looking For You"
+            description="This platform was designed to connect players, organizations and other specialized people from the gaming industry in a simple and effective form of registration in our database and subsequent display in our search engine."
             tech={[
-              "Wordpress",
-              "SEO",
-              "Custom CSS",
-              "Copywriting",
-              "Marketing",
+              "Javascript",
+              "React",
+              "PHP",
+              "Laravel",
+              "MySQL",
+              "Aos",
+              "Styled Components",
             ]}
-            img="/img/projects/jpsteelpicture.png"
-            link="http://www.jpsteel.cz"
+            img="/img/projects/lfypicture.png"
+            link="https://github.com/Pavelhaj93/Laravel-React-LFY-project"
+            git="https://github.com/Pavelhaj93/Laravel-React-LFY-project"
+          />
+          <PortfolioRight
+            title="iHeadphones E-Shop"
+            description="E-Commerce shop built in React.js and Next.js with safe payment system supported by Stripe.js containing different shipping methods, auto-tax and automatic email invoice send."
+            tech={["Javascript", "React.js", "Next.js", "Stripe.js", "Sanity"]}
+            img="/img/projects/iheadphones.png"
+            link="https://ecommerce-react-js-next-js-stripe-js.vercel.app/"
+            linkExternal="https://ecommerce-react-js-next-js-stripe-js.vercel.app/"
+            git="https://github.com/Pavelhaj93/Laravel-React-LFY-project"
           />
         </div>
       </section>

@@ -12,22 +12,14 @@ function AboutMe() {
       <section id="about" className="about">
         <div className="about__container">
           <div className="about__desc">
-            <h2
-              className="about__title heading"
-              data-aos="fade-up"
-              data-aos-once="true"
-            >
+            <h2 className="about__title heading" data-aos="fade-up">
               01.
-              <span
-                className="heading__span"
-                data-aos="fade-up"
-                data-aos-once="true"
-              >
+              <span className="heading__span" data-aos="fade-up">
                 {" "}
                 About Me
               </span>
             </h2>
-            <p data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+            <p data-aos="fade-up" data-aos-delay="100">
               <strong>My name is Pavel Hajduch.</strong> I am a front-end web
               developer and enjoy learning new trends.
               <strong>
@@ -37,7 +29,7 @@ function AboutMe() {
               </strong>
             </p>
             <br />
-            <p data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
+            <p data-aos="fade-up" data-aos-delay="200">
               I am open to learning new technologies and enjoy working with
               people
               <span className="about__underline">
@@ -47,22 +39,17 @@ function AboutMe() {
               .
             </p>
             <br />
-            <p data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
+            <p data-aos="fade-up" data-aos-delay="300">
               I would like to work for clients all around the world but
               currently I am based in Prague, Czech Republic.
             </p>
             <br />
-            <p data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+            <p data-aos="fade-up" data-aos-delay="400">
               I like travelling, nature, crossfit and snowboarding. If I do not
               develop, you can also meet me trekking in the mountains.
             </p>
             <br />
-            <h4
-              className="about__cta"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-once="true"
-            >
+            <h4 className="about__cta" data-aos="fade-up" data-aos-delay="100">
               Get in touch and let's do something great together.
             </h4>
             <br />
@@ -72,7 +59,6 @@ function AboutMe() {
               className="button"
               data-aos="fade-up"
               data-aos-delay="600"
-              data-aos-once="true"
             >
               Contact me
             </a>
@@ -81,7 +67,6 @@ function AboutMe() {
             className="about__image__wrapper"
             data-aos="fade-left"
             data-aos-delay="100"
-            data-aos-once="true"
           >
             <img
               src="/img/profilepicture.JPG"

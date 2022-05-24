@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-function PortfolioRight({ title, link, description, tech, img, git }) {
+function PortfolioRight({ title, link, description, tech, img, git, linkExternal }) {
   const [screenSize, setScreenSize] = useState([]);
 
   useLayoutEffect(() => {
@@ -30,8 +30,7 @@ function PortfolioRight({ title, link, description, tech, img, git }) {
           className="project__content"
           data-aos="fade-right"
           data-aos-delay="200"
-          data-aos-anchor-placement="center-bottom"
-          data-aos-once="true"
+          data-aos-anchor-placement="bottom"
         >
           <p className="project__overline">Featured Project</p>
           <h3 className="project__title">
@@ -48,9 +47,9 @@ function PortfolioRight({ title, link, description, tech, img, git }) {
             })}
           </ul>
           <div className="project__links">
-            <a href={link} className="social__link">
+            {linkExternal && (<a href={linkExternal} className="social__link">
               <External height="20px" />
-            </a>
+            </a>)}
             {git && (
               <a href={git} className="social__link">
                 <GitHub height="20px" />
@@ -61,12 +60,11 @@ function PortfolioRight({ title, link, description, tech, img, git }) {
         <div
           className={screenSize[0] > 828 ? "portfolio__wrapper--img" : "hidden"}
           data-aos="fade-left"
-          data-aos-delay="500"
+          data-aos-delay="200"
           data-aos-anchor-placement="bottom"
-          data-aos-once="true"
         >
           <a href={link} alt={title} target="_blank" rel="noreferrer">
-            <img src={img} alt={title} className="project__img" />
+            <img src={img} alt={title} className="project__img" style={{ height: 350}}/>
           </a>
         </div>
       </PortfolioContainerRight>
@@ -114,21 +112,21 @@ const PortfolioContainerRight = styled.div`
 
   .portfolio__wrapper--img {
     grid-column: 5 / -1;
+    grid-row: 1 / -1;
     justify-self: end;
     max-height: 350px;
     text-align: right;
     grid-row: 1 / -1;
     position: relative;
     width: auto;
-
-    &:hover {
-      z-index: 3;
-    }
+    object-fit: cover;
   }
 
   .project__img {
     border-radius: var(--border-radius);
     filter: grayscale(1);
+    transition: all 1s;
+    
 
     @media (max-width: 1200px) {
       & {

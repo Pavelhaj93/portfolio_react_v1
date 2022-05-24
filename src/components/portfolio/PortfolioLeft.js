@@ -5,7 +5,15 @@ import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-function PortfolioLeft({ title, link, description, tech, img, git }) {
+function PortfolioLeft({
+  title,
+  link,
+  description,
+  tech,
+  img,
+  git,
+  linkExternal,
+}) {
   const [screenSize, setScreenSize] = useState([]);
 
   useLayoutEffect(() => {
@@ -30,8 +38,7 @@ function PortfolioLeft({ title, link, description, tech, img, git }) {
           className={screenSize[0] > 828 ? "portfolio__wrapper--img" : "hidden"}
           data-aos="fade-right"
           data-aos-delay="200"
-          data-aos-anchor-placement="center-bottom"
-          data-aos-once="true"  
+          data-aos-anchor-placement="bottom"
         >
           <a href={link} alt={title} target="_blank" rel="noreferrer">
             <img src={img} alt={title} className="project__img" />
@@ -40,9 +47,8 @@ function PortfolioLeft({ title, link, description, tech, img, git }) {
         <div
           className="project__content"
           data-aos="fade-left"
-          data-aos-delay="500"
+          data-aos-delay="200"
           data-aos-anchor-placement="bottom"
-          data-aos-once="true"
         >
           <p className="project__overline">Featured Project</p>
           <h3 className="project__title">
@@ -59,9 +65,11 @@ function PortfolioLeft({ title, link, description, tech, img, git }) {
             })}
           </ul>
           <div className="project__links">
-            <a href={link} className="social__link">
-              <External height="20px" />
-            </a>
+            {linkExternal && (
+              <a href={linkExternal} className="social__link">
+                <External height="20px" />
+              </a>
+            )}
             {git && (
               <a href={git} className="social__link">
                 <GitHub height="20px" />
@@ -117,15 +125,12 @@ const PortfolioContainerLeft = styled.div`
     grid-row: 1 / -1;
     position: relative;
     width: auto;
-
-    &:hover {
-      z-index: 3;
-    }
   }
 
   .project__img {
     border-radius: var(--border-radius);
     filter: grayscale(1);
+    transition: all 1s;
 
     @media (max-width: 1200px) {
       & {

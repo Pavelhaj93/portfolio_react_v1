@@ -40,6 +40,7 @@ html {
 .App {
   padding: 0 5em;
   width: 100%;
+  // filter: blur(8px); This filter I need to apply on sideBar(true)
 
   @media (max-width: 768px) {
     & {

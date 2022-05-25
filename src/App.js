@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 
 import Navbar from "./components/navigation/Navbar";
 import Header from "./components/header/Header";
@@ -10,6 +11,11 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 
 function App() {
+
+  useEffect(() => {
+    document.title = "Pavel Hajduch Portfolio React Developer"
+ }, []);
+
   return (
     <>
     <div className="App">

@@ -69,9 +69,15 @@ const Navbar = () => {
         </ul>
       </nav>
       {screenSize <= 800 && (
-        <HamburgerContainer onClick={showSidebar}>
-          <Hamburger color="var(--greenish-color)" toggled={isOpen} toggle={setOpen}/>
-        </HamburgerContainer>
+        <>
+          <HamburgerContainer onClick={showSidebar}>
+            <Hamburger
+              color="var(--greenish-color)"
+              toggled={isOpen}
+              toggle={setOpen}
+            />
+          </HamburgerContainer>
+        </>
       )}
 
       <Sidebar sidebar={sidebar}>
@@ -116,7 +122,7 @@ const Navbar = () => {
       </Sidebar>
     </>
   );
-}
+};
 
 export default Navbar;
 
@@ -158,3 +164,4 @@ const HamburgerContainer = styled.div`
     z-index: 100;
   }
 `;
+

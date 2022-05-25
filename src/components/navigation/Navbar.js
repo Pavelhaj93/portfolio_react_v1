@@ -138,7 +138,7 @@ const Sidebar = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease-out;
+  transition: cubic-bezier(0.645,0.045,0.355,1);
 
   .nav__sidebar__container {
     display: ${({ sidebar }) => (sidebar ? "flex" : "none")};

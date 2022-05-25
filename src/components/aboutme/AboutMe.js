@@ -56,11 +56,11 @@ function AboutMe() {
             <br />
             <a
               href="#contact"
-              className="button"
+             
               data-aos="fade-up"
               data-aos-delay="600"
             >
-              Contact me
+              <button className="button">Contact me</button>
             </a>
           </div>
           <div

@@ -30,11 +30,11 @@ function Contact() {
             href="mailto:pavelhajduch93@gmail.com"
             rel="noreferrer"
             target="blank"
-            className="button"
+            
             data-aos="fade-up"
             data-aos-delay="600"
           >
-            Say Hello
+            <button className="button">Say Hello</button>
           </a>
         </div>
       </section>

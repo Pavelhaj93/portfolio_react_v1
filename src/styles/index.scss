@@ -29,6 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $whit;
+  overflow-x: hidden;
 }
 
 .modal-open {
@@ -37,6 +38,7 @@ body {
 
 html {
   width: 100vw;
+  overflow-x: hidden;
 }
 
 .App {
@@ -57,4 +59,9 @@ html {
   & {
     padding: 0 2em;
   }
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
 }

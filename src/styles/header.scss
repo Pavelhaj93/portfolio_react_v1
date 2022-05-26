@@ -1,10 +1,12 @@
 .header {
     min-height: 95vh;
+    display: flex;
     color: #ebebeb;
     text-align: left;
     margin-top: 3rem;
     padding-top: 8rem;
     background-color: $navy;
+    flex-wrap: wrap;
 
     @media (max-width: 768px) {
         padding-top: 3rem;
@@ -92,6 +94,5 @@
         }
     }
 }
-
   
   

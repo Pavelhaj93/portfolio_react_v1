@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 function Header() {
   return (
@@ -11,7 +12,7 @@ function Header() {
               Pavel Hajduch.
             </a>
           </h1>
-          <h2 className="header__desc">I'm a Front End Web Developer.</h2>
+          <h2 className="header__desc">I'm a Front-End Developer.</h2>
           <p className="header__text">
             I specialize in designing and building digital experiences.
             Currently, I'm focused on building accessible, gaming oriented
@@ -24,3 +25,16 @@ function Header() {
 }
 
 export default Header;
+
+export const Main = styled.div`
+   {
+    padding: 0 5em;
+    width: 100%;
+    filter: blur(8px);
+    This filter I need to apply on sideBar(true) @media (max-width: 768px) {
+      & {
+        padding: 0 2em;
+      }
+    }
+  }
+`;

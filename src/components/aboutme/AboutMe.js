@@ -7,6 +7,7 @@ function AboutMe() {
   useEffect(() => {
     Aos.init({ duration: 500 });
   }, []);
+  
   return (
     <>
       <section id="about" className="about">
@@ -21,11 +22,12 @@ function AboutMe() {
             </h2>
             <p data-aos="fade-up" data-aos-delay="100">
               <strong>My name is Pavel Hajduch.</strong> I am a front-end web
-              developer and enjoy learning new trends.
+              developer and enjoy learning new trends.<br></br>
               <strong>
                 {" "}
-                I am developing user interfaces in JavaScript and React and I
-                have a basic experience with PHP/Laravel and MySQL.
+                <br></br>I develope user interfaces in React.js and Next.js and
+                I also have a basic experience with PHP/Laravel and MySQL
+                databases.
               </strong>
             </p>
             <br />
@@ -46,7 +48,7 @@ function AboutMe() {
             <br />
             <p data-aos="fade-up" data-aos-delay="400">
               I like travelling, nature, crossfit and snowboarding. If I do not
-              develop, you can also meet me trekking in the mountains.
+              develope, you can also meet me trekking in the mountains.
             </p>
             <br />
             <h4 className="about__cta" data-aos="fade-up" data-aos-delay="100">
@@ -54,12 +56,7 @@ function AboutMe() {
             </h4>
             <br />
             <br />
-            <a
-              href="#contact"
-             
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
+            <a href="#contact" data-aos="fade-up" data-aos-delay="600">
               <button className="button">Contact me</button>
             </a>
           </div>

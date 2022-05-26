@@ -29,16 +29,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $whit;
-  overflow-x: hidden;
 }
 
 .modal-open {
-  overflow-y: hidden;
-}
-
-html {
-  width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .App {
@@ -51,7 +45,6 @@ html {
 }
 
 .blur {
-  
   padding: 0 5em;
   width: 100%;
   filter: blur(8px);

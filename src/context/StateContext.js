@@ -7,7 +7,7 @@ export const StateContext = ({ children }) => {
 
   const showSidebar = () => {
     setSidebar(!sidebar);
-    if (document.body.className !== "body modal-open") {
+    if (document.body.className !== "modal-open") {
         document.body.classList.add('modal-open')
     } else {
         document.body.classList.remove('modal-open');

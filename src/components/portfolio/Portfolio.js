@@ -49,7 +49,7 @@ function Portfolio() {
           />
           <PortfolioLeft
             title="Knoflix"
-            description="This website was designed for my friend which has a building company."
+            description="This website was designed for my friend which has a building company. The website contains all information about the company, services, prices and contact and admin environment for easy editing of the website."
             tech={[
               "Wordpress",
               "SEO",

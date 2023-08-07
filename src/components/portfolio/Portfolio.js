@@ -28,9 +28,10 @@ function Portfolio() {
               "Prisma",
               "SEO",
             ]}
-            img="/img/projects/vaszubarpicture.png"
-            link="http://www.vaszubarvhk.cz"
-            linkExternal="http://www.vaszubarvhk.cz"
+            img="/img/projects/hledammotory.png"
+            link="https://www.hledammotory.cz"
+            linkExternal="https://www.hledammotory.cz"
+            git="https://github.com/Pavelhaj93/hledamMotoryV1"
           />
           <PortfolioRight
             title="Váš Zubař v HK"
@@ -43,8 +44,8 @@ function Portfolio() {
               "Marketing",
             ]}
             img="/img/projects/vaszubarpicture.png"
-            link="http://www.vaszubarvhk.cz"
-            linkExternal="http://www.vaszubarvhk.cz"
+            link="https://www.vaszubarvhk.cz"
+            linkExternal="https://www.vaszubarvhk.cz"
           />
           <PortfolioLeft
             title="Knoflix"
@@ -58,7 +59,7 @@ function Portfolio() {
             ]}
             img="/img/projects/knoflix.png"
             link="https://www.knoflix.cz"
-            git="https://www.knoflix.cz"
+            linkExternal="https://www.knoflix.cz"
           />
            <PortfolioRight
             title="JP Steel Structures"
@@ -71,8 +72,8 @@ function Portfolio() {
               "Marketing",
             ]}
             img="/img/projects/jpsteelpicture.png"
-            link="http://www.jpsteel.cz"
-            linkExternal="http://www.jpsteel.cz"
+            link="https://www.jpsteel.cz"
+            linkExternal="https://www.jpsteel.cz"
           />
            <PortfolioLeft
             title="iHeadphones E-Shop"
@@ -81,7 +82,7 @@ function Portfolio() {
             img="/img/projects/iheadphones.png"
             link="https://ecommerce-react-js-next-js-stripe-js.vercel.app/"
             linkExternal="https://ecommerce-react-js-next-js-stripe-js.vercel.app/"
-            git="https://github.com/Pavelhaj93/Laravel-React-LFY-project"
+            git="https://github.com/Pavelhaj93/ecommerce-ReactJs_NextJs_Stripe"
           />
           <PortfolioRight
             title="Looking For You"
